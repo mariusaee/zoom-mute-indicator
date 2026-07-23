@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ABE0000000000000000000005"
-               BuildableName = "Zoom Mute Status.app"
-               BlueprintName = "Zoom Mute Status"
+               BuildableName = "Zoom Mute Indicator.app"
+               BlueprintName = "Zoom Mute Indicator"
                ReferencedContainer = "container:ZoomMuteStatus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE0000000000000000000005"
-            BuildableName = "Zoom Mute Status.app"
-            BlueprintName = "Zoom Mute Status"
+            BuildableName = "Zoom Mute Indicator.app"
+            BlueprintName = "Zoom Mute Indicator"
             ReferencedContainer = "container:ZoomMuteStatus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -60,8 +60,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABE0000000000000000000005"
-            BuildableName = "Zoom Mute Status.app"
-            BlueprintName = "Zoom Mute Status"
+            BuildableName = "Zoom Mute Indicator.app"
+            BlueprintName = "Zoom Mute Indicator"
             ReferencedContainer = "container:ZoomMuteStatus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

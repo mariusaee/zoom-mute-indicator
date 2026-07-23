@@ -1,4 +1,4 @@
-# Zoom Mute Status
+# Zoom Mute Indicator
 
 A tiny native macOS menu bar app that shows, at a glance, whether your Zoom
 microphone is muted — without switching to the Zoom window.
@@ -32,14 +32,14 @@ color-coded microphone icon that always reflects it.
 ## Build & install
 
 ```bash
-xcodebuild -project ZoomMuteStatus.xcodeproj -scheme "Zoom Mute Status" -configuration Release build
+xcodebuild -project ZoomMuteStatus.xcodeproj -scheme "Zoom Mute Indicator" -configuration Release build
 ```
 
 The built app lands in the printed `Build/Products/Release/` path. Copy it to
 `/Applications`:
 
 ```bash
-cp -R "$(xcodebuild -project ZoomMuteStatus.xcodeproj -scheme "Zoom Mute Status" -configuration Release -showBuildSettings 2>/dev/null | awk -F' = ' '/ TARGET_BUILD_DIR /{d=$2} / FULL_PRODUCT_NAME /{n=$2} END{print d"/"n}')" /Applications/
+cp -R "$(xcodebuild -project ZoomMuteStatus.xcodeproj -scheme "Zoom Mute Indicator" -configuration Release -showBuildSettings 2>/dev/null | awk -F' = ' '/ TARGET_BUILD_DIR /{d=$2} / FULL_PRODUCT_NAME /{n=$2} END{print d"/"n}')" /Applications/
 ```
 
 Or just open `ZoomMuteStatus.xcodeproj` in Xcode and run.
@@ -50,7 +50,7 @@ The app reads Zoom's menus through the Accessibility API, so it needs
 Accessibility access. On first launch macOS prompts you; you can also enable it
 manually:
 
-**System Settings → Privacy & Security → Accessibility → enable "Zoom Mute Status".**
+**System Settings → Privacy & Security → Accessibility → enable "Zoom Mute Indicator".**
 
 Menu titles are matched in English, so run Zoom with an English UI.
 
@@ -63,7 +63,7 @@ permission to stick, sign with a stable certificate — a Developer ID or an
 Apple Development identity:
 
 ```bash
-codesign --force --deep --sign "Apple Development: you@example.com (TEAMID)" "/Applications/Zoom Mute Status.app"
+codesign --force --deep --sign "Apple Development: you@example.com (TEAMID)" "/Applications/Zoom Mute Indicator.app"
 ```
 
 Then grant Accessibility once; it will persist as long as you keep signing with

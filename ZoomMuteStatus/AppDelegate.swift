@@ -54,7 +54,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     menu.addItem(loginItem)
 
     menu.addItem(.separator())
-    menu.addItem(NSMenuItem(title: "Quit Zoom Mute Status",
+    menu.addItem(NSMenuItem(title: "Quit Zoom Mute Indicator",
                             action: #selector(NSApplication.terminate(_:)),
                             keyEquivalent: "q"))
 
