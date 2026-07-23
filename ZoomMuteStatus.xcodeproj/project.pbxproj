@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABE0000000000000000000014 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE0000000000000000000010 /* main.swift */; };
+		ABE0000000000000000000015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE0000000000000000000011 /* AppDelegate.swift */; };
+		ABE0000000000000000000016 /* ZoomStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE0000000000000000000012 /* ZoomStatus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABE0000000000000000000006 /* Zoom Mute Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zoom Mute Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE0000000000000000000010 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ABE0000000000000000000011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABE0000000000000000000012 /* ZoomStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomStatus.swift; sourceTree = "<group>"; };
+		ABE0000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE000000000000000000000E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE0000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				ABE0000000000000000000004 /* ZoomMuteStatus */,
+				ABE0000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE0000000000000000000006 /* Zoom Mute Status.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE0000000000000000000004 /* ZoomMuteStatus */ = {
+			isa = PBXGroup;
+			children = (
+				ABE0000000000000000000010 /* main.swift */,
+				ABE0000000000000000000011 /* AppDelegate.swift */,
+				ABE0000000000000000000012 /* ZoomStatus.swift */,
+				ABE0000000000000000000013 /* Info.plist */,
+			);
+			path = ZoomMuteStatus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE0000000000000000000005 /* Zoom Mute Status */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE0000000000000000000008 /* Build configuration list for PBXNativeTarget "Zoom Mute Status" */;
+			buildPhases = (
+				ABE000000000000000000000D /* Sources */,
+				ABE000000000000000000000E /* Frameworks */,
+				ABE000000000000000000000F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zoom Mute Status";
+			productName = ZoomMuteStatus;
+			productReference = ABE0000000000000000000006 /* Zoom Mute Status.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					ABE0000000000000000000005 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = ABE0000000000000000000007 /* Build configuration list for PBXProject "ZoomMuteStatus" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABE0000000000000000000002;
+			productRefGroup = ABE0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE0000000000000000000005 /* Zoom Mute Status */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE000000000000000000000F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE000000000000000000000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE0000000000000000000014 /* main.swift in Sources */,
+				ABE0000000000000000000015 /* AppDelegate.swift in Sources */,
+				ABE0000000000000000000016 /* ZoomStatus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ABE0000000000000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABE000000000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ABE000000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = ZoomMuteStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariusae.ZoomMuteStatus;
+				PRODUCT_NAME = "Zoom Mute Status";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABE000000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = ZoomMuteStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariusae.ZoomMuteStatus;
+				PRODUCT_NAME = "Zoom Mute Status";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE0000000000000000000007 /* Build configuration list for PBXProject "ZoomMuteStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE0000000000000000000009 /* Debug */,
+				ABE000000000000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE0000000000000000000008 /* Build configuration list for PBXNativeTarget "Zoom Mute Status" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE000000000000000000000B /* Debug */,
+				ABE000000000000000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE0000000000000000000001 /* Project object */;
+}
