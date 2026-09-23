@@ -8,6 +8,16 @@ currently muted. If you rely on global mute/unmute shortcuts while working in
 other apps, there's no quick way to see your state. This app adds a
 color-coded microphone icon that always reflects it.
 
+![Menu bar icon states: muted, live, not in a meeting, no access](docs/states.png)
+
+## Download
+
+Grab the latest build from the [**Releases**](https://github.com/mariusaee/zoom-mute-indicator/releases/latest)
+page (`.dmg` or `.zip`), then see [Accessibility permission](#accessibility-permission)
+below. The build is ad-hoc signed and not notarized, so on first launch open it
+via **right-click → Open**, or run
+`xattr -dr com.apple.quarantine "/Applications/Zoom Mute Indicator.app"`.
+
 ## Features
 
 - Native Swift / AppKit — a single ~130 KB agent app, no runtime dependencies.
