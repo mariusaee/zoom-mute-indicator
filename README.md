@@ -24,12 +24,13 @@ via **right-click → Open**, or run
 - Reads Zoom's mute state directly through the macOS **Accessibility API**
   (a short menu-bar walk), polled at 10 Hz, so the icon updates effectively
   instantly.
-- Color-coded [SF Symbols](https://developer.apple.com/sf-symbols/) in the
-  menu bar:
-  - 🔴 red `microphone.slash.fill` — **muted**
-  - 🟢 green `microphone.fill` — **live** (unmuted)
-  - ⚪️ gray — not in a meeting
-  - ⚠️ orange — Accessibility permission missing
+- A bold, color-coded pill in the menu bar — sized to match the system
+  microphone indicator, with a white [SF Symbol](https://developer.apple.com/sf-symbols/)
+  glyph:
+  - 🔴 red mic-slash — **muted**
+  - 🟢 green mic — **live** (unmuted)
+  - ⚫️ gray mic — not in a meeting
+  - 🟠 orange warning — Accessibility permission missing
 - Menu with live status text, a **Launch at Login** toggle (`SMAppService`),
   a shortcut to the Accessibility settings pane, and Quit.
 - Runs as a menu-bar agent (`LSUIElement`) — no Dock icon.

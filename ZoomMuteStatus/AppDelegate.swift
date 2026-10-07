@@ -11,9 +11,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
   private var lastState: MuteState = .notInMeeting
 
-  // Symbol point size in the menu bar. ~15pt reads like a native status icon.
-  private let iconPointSize: CGFloat = 15
-
   // How often we re-read Zoom's mute state. The Accessibility read is cheap
   // (a short menu-bar walk over IPC), so even 10 Hz costs a negligible slice
   // of CPU and keeps the icon effectively instant.
@@ -74,27 +71,58 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     guard let button = statusItem.button else { return }
 
     let symbolName: String
-    let color: NSColor
+    let background: NSColor
     let description: String
 
     switch state {
     case .muted:
-      symbolName = "microphone.slash.fill"; color = .systemRed; description = "Muted"
+      symbolName = "microphone.slash.fill"; background = .systemRed; description = "Muted"
     case .unmuted:
-      symbolName = "microphone.fill"; color = .systemGreen; description = "Unmuted"
+      symbolName = "microphone.fill"; background = .systemGreen; description = "Unmuted"
     case .notInMeeting:
-      symbolName = "microphone.fill"; color = .secondaryLabelColor; description = "Zoom not in a meeting"
+      symbolName = "microphone.fill"
+      background = NSColor(calibratedWhite: 0.45, alpha: 0.9); description = "Zoom not in a meeting"
     case .noPermission:
-      symbolName = "exclamationmark.triangle.fill"; color = .systemOrange; description = "Accessibility permission needed"
+      symbolName = "exclamationmark.triangle.fill"; background = .systemOrange
+      description = "Accessibility permission needed"
     }
 
-    let config = NSImage.SymbolConfiguration(pointSize: iconPointSize, weight: .regular)
-      .applying(NSImage.SymbolConfiguration(paletteColors: [color]))
-    let image = NSImage(systemSymbolName: symbolName, accessibilityDescription: description)?
-      .withSymbolConfiguration(config)
-    // Colored (non-template) so the red/green tint survives in the menu bar.
-    image?.isTemplate = false
-    button.image = image
+    button.image = Self.pillIcon(symbolName: symbolName, background: background, description: description)
+  }
+
+  /// A filled rounded-rect "pill" with a bold white glyph, sized to the menu
+  /// bar — far more legible than a thin monochrome symbol, like the system
+  /// microphone indicator.
+  private static func pillIcon(symbolName: String, background: NSColor,
+                               description: String) -> NSImage {
+    let thickness = NSStatusBar.system.thickness   // ~22pt
+    let height = thickness + 2                        // fill the bar like the system pill
+    let width = height * 1.54                         // wide, matching the system pill's width
+    let radius = height * 0.5                          // fully rounded ends, like the system pill
+    let glyphPoint = height * 0.62                     // a hair larger than the system mic
+
+    let glyphConfig = NSImage.SymbolConfiguration(pointSize: glyphPoint, weight: .regular)
+      .applying(NSImage.SymbolConfiguration(paletteColors: [.white]))
+    let glyph = NSImage(systemSymbolName: symbolName, accessibilityDescription: description)?
+      .withSymbolConfiguration(glyphConfig)
+    glyph?.isTemplate = false
+
+    // drawingHandler re-renders at the display's backing scale, so it stays
+    // crisp on Retina.
+    let image = NSImage(size: NSSize(width: width, height: height), flipped: false) { rect in
+      let pill = NSBezierPath(roundedRect: rect, xRadius: radius, yRadius: radius)
+      background.setFill()
+      pill.fill()
+      if let glyph = glyph {
+        let g = glyph.size
+        glyph.draw(in: NSRect(x: rect.midX - g.width / 2, y: rect.midY - g.height / 2,
+                              width: g.width, height: g.height))
+      }
+      return true
+    }
+    // Colored (non-template) so the red/green fill survives in the menu bar.
+    image.isTemplate = false
+    return image
   }
 
   private func applyMenu(for state: MuteState) {
